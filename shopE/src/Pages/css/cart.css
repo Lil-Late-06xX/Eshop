@@ -1,0 +1,117 @@
+/* Cart.css (or any suitable CSS file) */
+
+/* Cart container */
+.bigCheckout {
+    padding: 20px;
+    background-color: #f2f2f2;
+  }
+
+  section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .miniSection{
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    gap: 5px;
+    width: 90vw;
+    background-color:whitesmoke;
+    box-shadow: 0px 0px 10px black;
+    opacity: 0.8;
+  }
+  
+  /* Checkout section */
+  .checkout {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 10px black;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .checkoutBtn{
+    display: flex;
+  }
+  
+  /* Product item */
+  .checkout > div {
+    margin-bottom: 20px;
+  }
+  
+  .checkout h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .checkout p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  /* Quantity handler */
+  .countHandler {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100px;
+  }
+  
+  .countHandler button {
+    background-color: #f0c14b;
+    color: #111;
+    border: none;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .countHandler button:hover {
+    background-color: #d2ac32;
+  }
+  
+  .countHandler h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 10px;
+  }
+  
+  /* Total amount */
+  .checkout h1 {
+    font-size: 40px;
+    margin-top: 20px;
+  }
+  
+  /* Action buttons */
+  .checkout button {
+    background-color: #f0c14b;
+    color: #111;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .checkout button:last-child {
+    background-color: #ff4500;
+    color: white;
+  }
+  
+  .checkout button:hover {
+    background-color: #d2ac32;
+  }
+  
+  .checkout button:last-child:hover {
+    background-color: #ff3300;
+  }
+  

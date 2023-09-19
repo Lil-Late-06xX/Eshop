@@ -1,0 +1,37 @@
+/* Dropdown container */
+.shopping-dropdown {
+    position: relative;
+    display: inline-block;
+    bottom:30px
+  }
+  
+  /* Dropdown button */
+  .shopping-dropdown select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    outline: none;
+    appearance: none; /* Remove default styles in some browsers */
+    -webkit-appearance: none; 
+    width: 100%;/* Remove default styles in Safari */
+  }
+  
+  /* Custom style for the selected option */
+  .shopping-dropdown::after {
+    content: '\25BC'; /* Down arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+  }
+  
+  /* Styling for the selected category display */
+  .selected-category {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
