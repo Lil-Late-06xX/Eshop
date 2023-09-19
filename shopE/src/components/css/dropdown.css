@@ -14,7 +14,7 @@
     background-color: #fff;
     cursor: pointer;
     outline: none;
-    appearance: none; /* Remove default styles in some browsers */
+    appearance: none; 
     -webkit-appearance: none; 
     width: 100%;/* Remove default styles in Safari */
   }
