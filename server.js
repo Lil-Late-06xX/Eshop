@@ -23,7 +23,7 @@ app.post("/checkout", async (req, res) => {
                   currency: "usd",
                   unit_amount: item.price * 100,
                   product_data: {
-                      name: item.name, // Replace with the actual product name
+                      name: item.name, 
                   },
               },
               quantity: item.quantity,

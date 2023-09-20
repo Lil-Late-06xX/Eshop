@@ -21,7 +21,7 @@ const ShoppingCategoriesDropdown = () => {
 
   return (
     <div className="shopping-dropdown">
-      <label htmlFor="categorySelect">Select a Category:</label>
+      <label htmlFor="categorySelect">Categories:</label>
       <select
         id="categorySelect"
         value={selectedCategory}
