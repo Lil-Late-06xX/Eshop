@@ -15,6 +15,11 @@
   gap: 20px;
 }
 
+.header__searchInput:focus{
+  border: 2px solid #febd69;
+  border-radius: 5px;
+}
+
 .cartcount{
   display: flex;
   flex-direction: row;
@@ -102,4 +107,38 @@
 .links{
   text-decoration: none;
   color: whitesmoke;
+}
+
+
+/* Add this to your CSS file */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.modal-content {
+  background-color: #fff;
+  display: flex;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 80%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.modal-show {
+  display: flex;
 }

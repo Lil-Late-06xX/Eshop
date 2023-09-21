@@ -1,15 +1,43 @@
+/* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom"
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { useContext } from 'react';
 import { ShopContext } from '../context/provider';
 import './css/header.css'; // You can create a CSS file for styling
+import producte from '../products'
+import Prod from '../components/Prod'
+import { useState } from "react";
 
 
 
 
 function Header() {
   const { cart } = useContext(ShopContext);
+  const [inputValue, setInputValue] = useState('');
+  const [showModal, setShowModal] = useState(false); 
+  const [searchResults, setSearchResults] = useState([]);
   const arrayLength = cart.length;
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
+
+  // Function to log the input field value when the button is clicked
+  const handleButtonClick = () => {
+    const results = producte.filter((item) => item.name === inputValue);
+    setSearchResults(results);
+    setShowModal(true); // Show the modal
+  };
+
+
+
+
+
+
+
+
+
+
 
   return (
     <div className="header">
@@ -22,9 +50,22 @@ function Header() {
 
         {/* Search bar */} 
         <div className="input">
-        <input type="text" className="header__searchInput" />
-        <button className="header__searchIcon fas fa-search">Search items</button>
+        <input type="text" value={inputValue} onChange={handleInputChange} className="header__searchInput" />
+        <button onClick={handleButtonClick} className="header__searchIcon fas fa-search">Search items...</button>
         </div>
+
+        {showModal && (
+        <div className="modal modal-show">
+          <div className="modal-content">
+            <h2>Search Results</h2>
+            {searchResults.map((result) => (
+              <Prod key={result.id} data={result} />
+            ))}
+            <button onClick={() => setShowModal(false)}>Close</button>
+          </div>
+        </div>
+      )}
+
 
 
       {/* Navigation */}
