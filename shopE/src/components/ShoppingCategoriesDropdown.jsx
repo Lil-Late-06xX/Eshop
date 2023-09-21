@@ -35,7 +35,7 @@ const ShoppingCategoriesDropdown = () => {
         ))}
       </select>
       {selectedCategory && (
-        <p className="selected-category">Selected Category: {selectedCategory}</p>
+        <p className="selected-category"> <h1>Shop split to categories coming Soon...</h1>Selected Category: {selectedCategory}</p>
       )}
     </div>
   );
