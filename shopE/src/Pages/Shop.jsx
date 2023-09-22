@@ -1,6 +1,8 @@
+/* eslint-disable no-unused-vars */
 
 import{ useRef, useEffect, useState } from 'react'; // Import useRef and useEffect
-import producte from '../products'
+import data from '../amazon_results'
+import Bdata from '../best-sellers'
 import Prod from '../components/Prod'
 import MainContent from '../components/MainContent';
 import './css/shop.css'
@@ -10,6 +12,26 @@ import Reviews from '../components/Reviews';
 import Footer from '../components/Footer';
 import CustomerReview from '../components/CustomerReview'; 
 import Bestseller from '../components/Bestseller';
+
+
+// Convert the data object into an array of arrays
+const dataArray = Object.values(data);
+
+// Flatten the array of arrays to get a single array of all objects
+const flattenedArray = dataArray.flat();
+
+
+
+
+// Convert the data object into an array of arrays
+const BdataArray = Object.values(Bdata);
+
+// Flatten the array of arrays to get a single array of all objects
+const BflattenedArray = BdataArray.flat();
+
+
+
+
 
 function generateCustomerReviews(reviewsData) {
   return reviewsData.map((review, index) => (
@@ -81,7 +103,7 @@ const Shop = () => {
         onMouseLeave={() => setIsHovered(false)} // Set isHovered to false on mouse leave
       >
         <div className="bigBox" ref={bigBoxRef}>
-          {producte.map((prod) => (
+          {flattenedArray.map((prod) => (
             <Prod key={prod.id} data={prod} />
           ))}
         </div>
@@ -104,12 +126,15 @@ const Shop = () => {
 
             <div className="reviewBox">
 
-                  <Reviews/>
+             
 
 
                   <div className="reviews">
+                    <h1>Client feedback</h1>
                         
                   {generateCustomerReviews(reviewsData)}
+
+             
                         
                   </div>
 
@@ -119,7 +144,7 @@ const Shop = () => {
      
             <div className="best-seller" >
           
-              {producte.map((prod) => (
+              {BflattenedArray.map((prod) => (
                 <Bestseller key={prod.id} data={prod} />
               ))}
             </div>

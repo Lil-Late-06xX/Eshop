@@ -2,8 +2,14 @@
 import React, { useContext } from 'react';
 import { ShopContext } from '../context/provider';
 
+
+
+
+
+
+
 const Cart = () => {
-  const { cart, addToCart, removeFromCart, getTotal, processedObject } = useContext(ShopContext);
+  const { cart, addToCart, removeFromCart, getTotal, processedObject  } = useContext(ShopContext);
   const tot = getTotal();
 
   const stripePay = async () => {
@@ -38,13 +44,12 @@ const Cart = () => {
         <h1>Cart is empty</h1>
       ) : (
         <div className="checkout">
-          <h1>Cart</h1>
           <section>
           {processedObject.products.map((prod) => (
             <div className='miniSection' key={prod.id}>
               <h2>{prod.name}</h2>
               <img src={prod.image} alt="" />
-              <h2>${prod.price.toFixed(2)}</h2>
+              <h2>${prod.price}</h2>
               <p>{prod.description}</p>
               <div className="countHandler">
                 <button onClick={() => removeFromCart(prod.id)}> - </button>

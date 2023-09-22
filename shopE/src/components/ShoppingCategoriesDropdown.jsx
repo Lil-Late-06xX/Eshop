@@ -4,11 +4,11 @@ import React, { useState } from 'react';
 const ShoppingCategoriesDropdown = () => {
   // Define shopping categories (you can replace these with your own categories)
   const categories = [
-    'Electronics',
-    'Clothing',
-    'Books',
-    'Home & Garden',
-    'Toys',
+    'Tv',
+    'iphone',
+    'Rtx',
+    'Nvidia',
+    'Samsung',
   ];
 
   // Initialize state to store the selected category
@@ -21,13 +21,13 @@ const ShoppingCategoriesDropdown = () => {
 
   return (
     <div className="shopping-dropdown">
-      <label htmlFor="categorySelect">Categories:</label>
+      <label htmlFor="categorySelect"></label>
       <select
         id="categorySelect"
         value={selectedCategory}
         onChange={handleCategoryChange}
       >
-         <option value="">-- Select Category --</option>
+        <option value="">-- Select Category --</option>
         {categories.map((category) => (
           <option key={category} value={category}>
             {category}

@@ -4,7 +4,6 @@ import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { useContext } from 'react';
 import { ShopContext } from '../context/provider';
 import './css/header.css'; // You can create a CSS file for styling
-import producte from '../products'
 import Prod from '../components/Prod'
 import { useState } from "react";
 
@@ -12,7 +11,7 @@ import { useState } from "react";
 
 
 function Header() {
-  const { cart } = useContext(ShopContext);
+  const { cart , mergedArray} = useContext(ShopContext);
   const [inputValue, setInputValue] = useState('');
   const [showModal, setShowModal] = useState(false); 
   const [searchResults, setSearchResults] = useState([]);
@@ -24,9 +23,10 @@ function Header() {
 
   // Function to log the input field value when the button is clicked
   const handleButtonClick = () => {
-    const results = producte.filter((item) => item.name === inputValue);
+    const results = mergedArray.filter((item) => item.name === inputValue);
     setSearchResults(results);
-    setShowModal(true); // Show the modal
+    setShowModal(true);
+    setInputValue('');
   };
 
 
@@ -55,23 +55,29 @@ function Header() {
         </div>
 
         {showModal && (
-        <div className="modal modal-show">
-          <div className="modal-content">
-            <h2>Search Results</h2>
-            {searchResults.map((result) => (
-              <Prod key={result.id} data={result} />
-            ))}
-            <button onClick={() => setShowModal(false)}>Close</button>
-          </div>
-        </div>
-      )}
+  <div className="modal modal-show">
+    <div className="modal-content">
+      <div className="prodmodel">
+        {searchResults.length === 0 ? (
+          <h1>No results found.</h1>
+        ) : (
+          searchResults.map((result) => (
+            <Prod key={result.id} data={result} />
+          ))
+        )}
+      </div>
+      <button className="closebtn" onClick={() => setShowModal(false)}>Close</button>
+    </div>
+  </div>
+)}
+
 
 
 
       {/* Navigation */}
       <div className="header__nav">
         {/* Sign in */}
-        <Link className="links header__option" to="/" >Sign in  </Link>
+        <Link className="links header__option" to="/signin" >Sign in  </Link>
 
 
 

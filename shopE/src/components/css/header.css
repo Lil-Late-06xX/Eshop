@@ -132,13 +132,27 @@
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   max-width: 80%;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  overflow: scroll;
+  height: 80%;
 
 }
 
 .modal-show {
   display: flex;
+}
+
+
+.prodmodel{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.closebtn{
+    width: 20%;
+    background-color: lightslategray;
+    border-radius: 3px;
 }

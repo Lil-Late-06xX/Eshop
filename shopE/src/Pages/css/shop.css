@@ -21,7 +21,7 @@
   display: flex;
   justify-content: center;
   opacity: 0.8;
-  width: 30vw;
+  width: 90vw;
   margin: 3%;
   
 }
@@ -42,7 +42,10 @@
 /* Product grid */
 /* Add this CSS to your shop.css file */
 .bigBox {
+  width: 100vw;
+  height: fit-content;
   display: flex;
+  flex-direction: row; 
   overflow-x: scroll;
   justify-content: flex-start;
   background-color: whitesmoke;
@@ -64,6 +67,16 @@
     justify-content: space-around;
     flex-direction: row;
 }
+
+.scrollbtn button{
+  background-color: #f0c14b;
+  color: #111;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 50%;
+}
 .best-seller{
   width: 40vw;
   height: 100vh;
@@ -73,16 +86,24 @@
   position: relative;
   top: 10px;
 }
-.reviews{
-    display: flex;
-    align-items: stretch;
-    gap: 10px;
-    flex-direction: column;
-    position: absolute;
-    padding: 20px;
-    width: 50%;
-    height: 80vh;
-    overflow-y: scroll;
+.reviews {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  position: absolute;
+  padding: 20px;
+  width: 50%;
+  height: 80vh;
+  overflow-y: scroll;
+  align-items: stretch;
+  align-content: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.reviews h1{
+  position: relative;
+  left: 25%;
 }
 .section2{
   display: flex;
@@ -114,11 +135,7 @@
   box-shadow: 0px 0px 10px black;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-img{
-  border-radius: 30px;
+  text-wrap: balance;
 }
 
 .productBox h2 {
@@ -162,7 +179,7 @@ img{
   width: 108%;
   border-radius: 5px;
   position: relative;
-  top: 100%;
+  top: 133%;
   opacity: 0.8;
 }
 
@@ -185,6 +202,23 @@ img{
     border-radius: 10px;
     opacity: 0.8;
 }
+
+.customer-review:nth-child(2)  {
+  border-top-left-radius: 50%;
+}
+
+.customer-review:nth-child(6)  {
+  border-bottom-left-radius: 50%;
+}
+
+.customer-review:nth-child(7)  {
+  border-top-right-radius: 50%;
+}
+
+.customer-review:last-child {
+  border-bottom-right-radius: 50%;
+}
+
 
 .customer-info {
   display: flex;
