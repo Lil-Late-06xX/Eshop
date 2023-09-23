@@ -156,3 +156,36 @@
     background-color: lightslategray;
     border-radius: 3px;
 }
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .header{
+    flex-direction: column-reverse;
+    align-items: center;
+    flex-direction: column;
+  }
+  .header__logo {
+    width: 80px; /* Adjust logo size for smaller screens */
+    display: none;
+  }
+
+  .header__searchIcon {
+    height: 10%;
+    position: relative;
+    top: 10px;
+}
+
+  .header__searchInput {
+    margin: 10px 0;
+  }
+
+  .header__nav {
+    flex-direction: row; /* Change back to row layout for smaller screens */
+    margin: 10px 0;
+  }
+
+  .header__option,
+  .header__optionCart {
+    margin: 0 10px; /* Adjust margin for smaller screens */
+  }
+}

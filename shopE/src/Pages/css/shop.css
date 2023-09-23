@@ -243,3 +243,71 @@
   font-size: 16px;
   line-height: 1.4;
 }
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .main {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .main2 {
+    padding: 15px;
+    width: 86vw;
+  }
+
+  .main3 {
+    padding: 15px;
+  }
+  .bigBox{
+    align-items: center;
+  }
+
+  .bigBox > * {
+    width: 90%;
+  }
+
+  .scrollbtn button {
+    padding: 6px 10px;
+  }
+
+  .best-seller {
+    width: 90%;
+    height: 227%;
+    top: 5%;
+  }
+
+  .reviews {
+    display: none;
+  }
+
+  .reviews h1 {
+    font-size: 24px;
+  }
+
+  .section2 {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .reviewBox {
+    width: 90%;
+    gap: 5%;
+  }
+
+  .productBox {
+    width: 90%;
+  }
+
+  .footer {
+    width: 100%;
+    top: 55%;
+  }
+
+  .customer-info {
+    flex-direction: row;
+    align-items: center;
+  }
+}

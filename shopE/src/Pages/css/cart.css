@@ -121,3 +121,28 @@
     background-color: #ff3300;
   }
   
+
+  /* Media query for smaller screens */
+@media (max-width: 768px) {
+  .miniSection {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  .miniSection img {
+    width: 50%; /* Adjust image width for smaller screens */
+  }
+
+  .checkoutBtn {
+    flex-direction: row; /* Change to row layout for smaller screens */
+  }
+
+  .countHandler {
+    flex-direction: row; /* Change to row layout for smaller screens */
+    justify-content: space-between; /* Space buttons evenly for smaller screens */
+    max-width: none;
+  }
+
+  .countHandler button {
+    margin: 0; /* Remove margin for smaller screens */
+  }
+}
