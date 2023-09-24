@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext } from 'react';
 import { ShopContext } from '../context/provider';
+import { Link } from "react-router-dom"
 
 
 
@@ -14,13 +15,13 @@ const Cart = () => {
 
   const stripePay = async () => {
     const lineItems = processedObject.products.map((prod) => ({
-      price: parseFloat(prod.price),
+      price: parseFloat(prod.price).toFixed(2),
       quantity: prod.count,
       name: prod.name,
     }));
 
     try {
-      const response = await fetch('http://localhost:4000/checkout', {
+      const response = await fetch('https://climbing-boundless-warrior.glitch.me/checkout', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -60,9 +61,9 @@ const Cart = () => {
           ))}
           </section>
         
-          <h1>Total : {tot} $</h1>
+          <h1>Total : {tot.toFixed(2)} $</h1>
           <div className="checkoutBtn">
-            <button>Continue Shopping</button>
+            <button><Link className="links" to="/" > Continue shopping</Link></button>
             <button onClick={stripePay}>Checkout</button>
           </div>
         </div>

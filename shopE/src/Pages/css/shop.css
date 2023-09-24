@@ -6,6 +6,9 @@
   padding: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+.carousel-container{
+  margin-bottom: 10px;
+}
 .main {
     opacity: 0.7;
     padding: 30px;
@@ -135,7 +138,9 @@
   box-shadow: 0px 0px 10px black;
   display: flex;
   flex-direction: column;
-  text-wrap: balance;
+  white-space: normal; /* This allows text to wrap onto multiple lines */
+  overflow-wrap: break-word; /* This allows words to break and wrap onto the next line when necessary */
+
 }
 
 .productBox h2 {
@@ -144,8 +149,10 @@
 }
 
 .productBox p {
+  padding-top: 5px;
   font-size: 14px;
   margin-bottom: 10px;
+  font-size: 1.7rem;
 }
 
 .btn-add {
@@ -273,8 +280,8 @@
   }
 
   .best-seller {
-    width: 90%;
-    height: 227%;
+    width: 91%;
+    height: 3200px;
     top: 5%;
   }
 
@@ -299,6 +306,9 @@
 
   .productBox {
     width: 90%;
+    border-radius: 5px;
+    white-space: normal;
+    overflow-wrap: break-word;
   }
 
   .footer {
@@ -309,5 +319,9 @@
   .customer-info {
     flex-direction: row;
     align-items: center;
+  }
+
+  .carousel-container{
+    margin-bottom: 10px;
   }
 }

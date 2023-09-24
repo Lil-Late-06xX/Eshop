@@ -33,7 +33,7 @@ const Prod = ({ data }) => {
 
   return (
     <div className='productBox'>
-      <h2>{name}</h2>
+      
       <img src={image} alt="no img data" />
       <p>${price}</p>
   <h5>{description}</h5> 

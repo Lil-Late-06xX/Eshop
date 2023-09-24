@@ -23,11 +23,15 @@ function Header() {
 
   // Function to log the input field value when the button is clicked
   const handleButtonClick = () => {
-    const results = mergedArray.filter((item) => item.name === inputValue);
+    const lowerCaseInputValue = inputValue.toLowerCase(); // Convert input to lowercase
+    const results = mergedArray.filter((item) =>
+      item.name.toLowerCase().includes(lowerCaseInputValue)
+    ); // Convert item name to lowercase and check for inclusion
     setSearchResults(results);
     setShowModal(true);
     setInputValue('');
   };
+  
 
 
 

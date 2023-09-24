@@ -21,7 +21,7 @@ const Bestseller = ({ data }) => {
 
   return (
     <div className='best-sell'>
-    <h2>{name}</h2>
+   
     <img src={image} alt="no img data" />
     <p>${price}</p>
     <h5>{description}</h5>

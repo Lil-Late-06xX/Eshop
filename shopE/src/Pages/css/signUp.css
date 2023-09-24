@@ -70,3 +70,33 @@
     display: flex;
     gap: 20px;
   }
+
+
+  /* Media query for smaller screens */
+@media (max-width: 768px) {
+  .signup-container {
+    top: 100px; /* Adjust the top spacing for smaller screens */
+  }
+  .signup-container input[type="text"]  {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  .signup-container  input[type="email"]  {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+
+  .signup-container input[type="password"]  {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+}
